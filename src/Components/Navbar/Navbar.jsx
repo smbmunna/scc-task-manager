@@ -1,14 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../../Hooks/UseAuth";
+import useAuth from "../../hooks/useAuth";
+
 
 
 const Navbar = () => {
     const {logout}= useAuth();
     const navigate= useNavigate();
     const links=<>
-        <Link to='/'>Home</Link>
-        <Link to='/login'>Login</Link>
-        <Link to='/registration'>Register</Link>
+        <Link className="btn btn-ghosttext-black" to='/'>Home</Link>
+        <Link  className="btn btn-ghosttext-black" to='/login'>Login</Link>
+        <Link  className="btn btn-ghosttext-black" to='/registration'>Register</Link>
+        <Link  className="btn btn-ghosttext-black" to='/dashboard'>Dashboard</Link>
         
     </>
 
@@ -35,7 +37,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="btn btn-ghost text-xl">My TODO APP</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
